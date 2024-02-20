@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     //when you get a result. click and click on another operator you can make
@@ -52,30 +51,31 @@ public class MainActivity extends AppCompatActivity {
     public void add(View view){
 
             operator = 1;
-            num1 = Double.parseDouble(textViewResult.getText().toString());
-            textViewResult.setText("0");
+            prepareForNum2();
 
     }
     public void subtraction(View view){
 
             operator = 2;
-            num1 = Double.parseDouble(textViewResult.getText().toString());
-            textViewResult.setText("0");
+            prepareForNum2();
 
     }
     public void multiplication(View view){
 
             operator = 3;
-            num1 = Double.parseDouble(textViewResult.getText().toString());
-            textViewResult.setText("0");
+            prepareForNum2();
 
     }
     public void division(View view){
 
             operator = 4;
-            num1 = Double.parseDouble(textViewResult.getText().toString());
-            textViewResult.setText("0");
+            prepareForNum2();
 
+    }
+
+    private void prepareForNum2(){
+        num1 = Double.parseDouble(textViewResult.getText().toString());
+        textViewResult.setText("0");
     }
 
 
